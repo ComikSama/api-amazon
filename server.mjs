@@ -6,8 +6,8 @@ const PORT = process.env.PORT || 3000;
 
 app.get('/scrape', async (req, res) => {
   const browser = await chromium.launch({
-    headless: true,
-    executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe'
+    headless: true
+    // No executablePath, usará el Chromium descargado por Playwright
   });
 
   const page = await browser.newPage();
