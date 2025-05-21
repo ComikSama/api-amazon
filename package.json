@@ -1,6 +1,7 @@
 {
   "type": "module",
   "scripts": {
+    "postinstall": "playwright install chromium",
     "start": "node server.mjs"
   },
   "dependencies": {
