@@ -2,7 +2,11 @@ import express from 'express';
 import { chromium } from 'playwright';
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const port = process.env.PORT || 10000;
+app.listen(port, () => {
+  console.log(`Servidor corriendo en http://localhost:${port}`);
+});
+
 
 app.get('/scrape', async (req, res) => {
   const browser = await chromium.launch({
